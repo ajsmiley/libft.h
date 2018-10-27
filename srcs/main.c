@@ -6,7 +6,7 @@
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 18:53:38 by achavez           #+#    #+#             */
-/*   Updated: 2018/10/26 15:40:34 by achavez          ###   ########.fr       */
+/*   Updated: 2018/10/26 18:05:55 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
  
@@ -14,9 +14,8 @@
 
 int main () 
 {
-	char *string = " HELLO World!";
-	int i = 0;
-	while (i++ < 15)
-	ft_putchar(string[i]);
+	int number = 494802-1;
+	//char const *test = "HELLO Y'ALL!";
+	ft_putnbr_fd(number,1);
    	return(0);
 }

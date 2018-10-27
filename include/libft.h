@@ -6,7 +6,7 @@
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:43:03 by achavez           #+#    #+#             */
-/*   Updated: 2018/10/26 15:40:37 by achavez          ###   ########.fr       */
+/*   Updated: 2018/10/26 18:43:48 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,13 @@ char	*ft_strjoin(char const *str1, char const *str2);
 char	*ft_strtrim(char const *string);
 char	**ft_strsplit(char const *string, char delimiter);
 void	ft_putchar(char c);
+void	ft_putstr(char const *string);
+void	ft_putendl(char const *string);
+void	ft_putnbr(int n);
+void	ft_putchar_fd(char character, int file_descriptor);
+void	ft_putstr_fd(char const *string, int file_descriptor);
+void	ft_putendl_fd(char const *string, int file_descriptor);
+void	ft_putnbr_fd(int number, int file_descriptor);
+char	*iota(int number);
 
 #endif

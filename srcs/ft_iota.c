@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_iota.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/25 16:39:51 by achavez           #+#    #+#             */
-/*   Updated: 2018/10/26 17:51:32 by achavez          ###   ########.fr       */
+/*   Created: 2018/10/26 18:13:57 by achavez           #+#    #+#             */
+/*   Updated: 2018/10/26 18:43:45 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*iota(int n)
 {
-	char	*newstr;
-	size_t	len1;
-	size_t	len2;
-	size_t	i;
-	size_t	j;
+	int sign;
+	char *newstr;
 
-	if (!s1 || !s2)
-		return (NULL);
-	i = 0;
-	j = 0;
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	newstr = ft_strnew(len1 + len2);
-	if (!newstr)
-		return (NULL);
-	while (i++ < len1)
-		*(newstr + i) = *(s1 + i);
-	while (j++ < len2)
-		*(newstr + i++) = *(s2 + j);
-	return (newstr);
+	sign = 0;
+	if (n == '-' || n == '+')
+	{
+		if (n == '-')
+			sign = -1;
+		n++;
+	}
+	while (n >= '0' && n <= '9')
+	{
+		newstr = n + '0';
+	}
 }
