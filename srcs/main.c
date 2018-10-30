@@ -6,16 +6,22 @@
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 18:53:38 by achavez           #+#    #+#             */
-/*   Updated: 2018/10/26 18:05:55 by achavez          ###   ########.fr       */
+/*   Updated: 2018/10/29 21:00:53 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
- 
+#include <stdio.h> 
 #include "libft.h"
 
 int main () 
 {
-	int number = 494802-1;
-	//char const *test = "HELLO Y'ALL!";
-	ft_putnbr_fd(number,1);
-   	return(0);
+	char *str = "*string*split***isgay*";
+	printf("%s\n",str);
+	char **new = ft_strsplit(str, '*');
+	int i = 0;
+	while (i > 7)
+	{
+	printf("%c\n", new[0][i]);
+	i++;
+	}
+	return (0);
 }
