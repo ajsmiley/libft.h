@@ -6,6 +6,7 @@ This is the very first project at <a href = "https://www.42.us.org/program/the-4
 2) Additional fucntions to be used on later projects
 3) Bonus fucntions for extra credit
 4) Addition funcitons for personal use
+
 Libc functions | Additional functions | Bonus Functions | Personal Functions
 :----------- | :-----------: | :-----------: | -----------:
 memset		| ft_memalloc	| ft_lstnew		| ft_upstring 
