@@ -6,7 +6,7 @@
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/27 18:53:16 by achavez           #+#    #+#             */
-/*   Updated: 2018/10/30 13:29:37 by achavez          ###   ########.fr       */
+/*   Updated: 2018/11/09 19:50:29 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static size_t	ft_wordcount(char const *rts, char f)
 {
 	size_t wee;
 
-	wee = 1;
+	wee = 0;
 	while (*rts)
 	{
 		rts += ft_skipdelim(rts, f);
@@ -52,27 +52,26 @@ static size_t	ft_wordcount(char const *rts, char f)
 char			**ft_strsplit(char const *s, char c)
 {
 	int		a;
-	int		bee;
 	char	**n;
 	int		lim;
 
 	a = 0;
-	bee = 0;
+	if (s == NULL)
+		return (NULL);
 	lim = (int)ft_wordcount(s, c);
-	if ((n = (char **)malloc(sizeof(char *) * lim)))
+	if ((n = (char **)malloc(sizeof(char *) * (lim + 1))))
 	{
-		while (s[a] && a < (int)ft_strlen(s) && bee < lim)
+		while (lim--)
 		{
-			a += ft_skipdelim(s, c);
-			if (s[a] && a < (int)ft_strlen(s) && bee < lim)
-			{
-				n[bee] = (char *)malloc(sizeof(char)
-						* ft_wordlen((s + a), c) + 1);
-				ft_memcpy(n[bee++], (s + a), (ft_wordlen((s + a), c) + 1));
-				a += (ft_wordlen((s + a), c) + 1);
-			}
+			while (*s == c && *s)
+				s++;
+			n[a] = ft_strsub(s, 0, ft_wordlen(s, c));
+			if (n[a] == NULL)
+				return (NULL);
+			s += ft_wordlen(s, c);
+			a++;
 		}
-		n[lim] = NULL;
+		n[a] = 0;
 		return (n);
 	}
 	return (NULL);

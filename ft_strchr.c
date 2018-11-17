@@ -6,7 +6,7 @@
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/24 13:26:56 by achavez           #+#    #+#             */
-/*   Updated: 2018/10/24 13:47:22 by achavez          ###   ########.fr       */
+/*   Updated: 2018/11/09 18:25:50 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strchr(const char *str, int c)
 	ch = c;
 	while (*str != ch)
 	{
-		str++;
 		if (*str == '\0')
 			return (NULL);
+		str++;
 	}
 	return ((char *)str);
 }

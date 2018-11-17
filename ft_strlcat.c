@@ -6,7 +6,7 @@
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 21:09:02 by achavez           #+#    #+#             */
-/*   Updated: 2018/10/23 21:54:21 by achavez          ###   ########.fr       */
+/*   Updated: 2018/11/09 18:56:11 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ size_t	ft_strlcat(char *restrict dest, const char *restrict src, size_t n)
 		return ((dlen + ft_strlen(s)));
 	while (*s != '\0')
 	{
-		if (n != 1)
+		if (size != 1)
 		{
 			*d++ = *s;
-			n--;
+			size--;
 		}
 		s++;
 	}

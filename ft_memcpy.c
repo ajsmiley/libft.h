@@ -6,7 +6,7 @@
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 20:12:13 by achavez           #+#    #+#             */
-/*   Updated: 2018/10/30 15:26:48 by achavez          ###   ########.fr       */
+/*   Updated: 2018/11/09 20:01:13 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,14 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char		*d;
-	char const	*s;
-	int			i;
+	const char	*s;
 
 	d = dest;
 	s = src;
-	i = 0;
-	while (n-- > 1)
+	while (n > 0)
 	{
-		d[i] = s[i];
-		i++;
+		*d++ = *s++;
+		n--;
 	}
-	d[i] = '\0';
 	return (dest);
 }

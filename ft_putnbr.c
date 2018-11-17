@@ -6,7 +6,7 @@
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 16:23:15 by achavez           #+#    #+#             */
-/*   Updated: 2018/10/26 17:01:08 by achavez          ###   ########.fr       */
+/*   Updated: 2018/11/09 18:54:06 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,5 @@
 
 void	ft_putnbr(int n)
 {
-	if (n >= 10)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else
-		ft_putchar(n + '0');
+	ft_putnbr_fd(n, 1);
 }

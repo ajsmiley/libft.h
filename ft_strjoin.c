@@ -6,7 +6,7 @@
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 16:39:51 by achavez           #+#    #+#             */
-/*   Updated: 2018/10/26 17:51:32 by achavez          ###   ########.fr       */
+/*   Updated: 2018/11/09 19:48:40 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,23 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*newstr;
-	size_t	len1;
-	size_t	len2;
-	size_t	i;
-	size_t	j;
+	char *d;
+	char *s;
 
-	if (!s1 || !s2)
+	if (s1 == NULL && s2 == NULL)
+		return (ft_strnew(0));
+	else if (s1 == NULL)
+		return (ft_strdup(s2));
+	else if (s2 == NULL)
+		return (ft_strdup(s1));
+	d = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
+	if (d == NULL)
 		return (NULL);
-	i = 0;
-	j = 0;
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	newstr = ft_strnew(len1 + len2);
-	if (!newstr)
-		return (NULL);
-	while (i++ < len1)
-		*(newstr + i) = *(s1 + i);
-	while (j++ < len2)
-		*(newstr + i++) = *(s2 + j);
-	return (newstr);
+	s = d;
+	while (*s1 != '\0')
+		*s++ = *s1++;
+	while (*s2 != '\0')
+		*s++ = *s2++;
+	*s = '\0';
+	return (d);
 }

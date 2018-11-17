@@ -6,7 +6,7 @@
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:43:03 by achavez           #+#    #+#             */
-/*   Updated: 2018/11/01 22:22:06 by achavez          ###   ########.fr       */
+/*   Updated: 2018/11/10 13:16:21 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ int					ft_isdigit(int arg);
 int					ft_isalnum(int arg);
 int					ft_isascii(int arg);
 int					ft_isprint(int arg);
+int					ft_upperchar(char *character);
+char				ft_iterupchar(unsigned int index, char *character);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 void				*ft_memalloc(size_t size);
@@ -69,7 +71,7 @@ void				ft_putchar_fd(char character, int file_descriptor);
 void				ft_putstr_fd(char const *string, int file_descriptor);
 void				ft_putendl_fd(char const *string, int file_descriptor);
 void				ft_putnbr_fd(int number, int file_descriptor);
-char				*ft_iota(int number);
+char				*ft_itoa(int number);
 void				ft_function_test1();
 void				ft_function_test2();
 
