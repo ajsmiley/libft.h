@@ -1,4 +1,4 @@
-# libft.h
+# What is libft.h?
 This is the very first project at <a href = "https://www.42.us.org/program/the-42-program/">42 Sillicon Valley.</a> You are required to re-create a list of Libc fucntions as well as useful bonus functions that will be helpful in completing future projects.
 # How many fucntions?
 42 students have 4 lists of fucntions to create before you can get credit for this project.
