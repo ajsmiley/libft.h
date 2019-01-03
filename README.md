@@ -37,7 +37,7 @@ isprint		| | |
 toupper		| | | 
 tolower		| | | 
 ## How do I use it?? 
-First run these commands <u>IN ORDER</u> in the terminal prompt:
+First run these commands <i>IN ORDER</i> in the terminal prompt:
 
       gitclone https://github.com/ajsmiley/libft.h.git
       cd libft.h
@@ -47,7 +47,7 @@ Head over to the main.c file like this and check it out:
 
       vim main.c
 Right now main is calling ft_function_test1() and that will print out information about the libc functions and how to use them. If you wish to test other functions you should do so in this file only.
-Now just run this command to compile the main file with the rest of the library:
+Now just run this command to compile the main file with the library:
       
       make main
 And finally run the this command to execute the main.c file:
