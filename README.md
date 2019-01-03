@@ -42,3 +42,15 @@ First run these commands <u>IN ORDER</u> in the terminal prompt:
       gitclone https://github.com/ajsmiley/libft.h.git
       cd libft.h
       make all
+The directory should now be full of .o files and a libft.a file, you're almost done!
+Head over to the main.c file like this and check it out:
+
+      vim main.c
+Right now main is calling ft_function_test1() and that will print out information about the libc functions and how to use them. If you wish to test other functions you should do so in this file only.
+Now just run the command to compile the main file with the rest of the library:
+      
+      make main
+And finally run the this command to execute the main.c file:
+
+      ./a.out
+Thats it!! Now you can use any of the brilliant function I have created in your C programs!! 
