@@ -1,11 +1,11 @@
 # What is libft.h?
-This is the very first project at <a href = "https://www.42.us.org/program/the-42-program/">42 Sillicon Valley.</a> You are required to re-create a list of Libc fucntions as well as useful bonus functions that will be helpful in completing future projects.
-# How many fucntions?
+This is the very first project at <a href = "https://www.42.us.org/program/the-42-program/">42 Sillicon Valley.</a> You are required to re-create a list of Libc fucntions as well as useful bonus functions that will be helpful in completing future projects. At 42 students can only use functions that are necessary for the project and also functions they create and include in their libft.h project.
+# How many fucntions are there?
 42 students have 4 lists of fucntions to create before you can get credit for this project.
 1) Useful Libc fucntions 
 2) Additional fucntions to be used on later projects
 3) Bonus fucntions for extra credit
-4) Addition funcitons for personal use
+4) Any addition funcitons for personal use
 
 Libc functions | Additional functions | Bonus Functions | Personal Functions
 :----------- | :-----------: | :-----------: | -----------:
@@ -36,3 +36,9 @@ isascii		| ft_putnbr_fd	| |
 isprint		| | |
 toupper		| | | 
 tolower		| | | 
+## How do I use it?? 
+First run these commands <u>IN ORDER</u> in the terminal prompt:
+
+      gitclone https://github.com/ajsmiley/libft.h.git
+      cd libft.h
+      make all
