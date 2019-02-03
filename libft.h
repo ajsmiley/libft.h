@@ -6,7 +6,7 @@
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:43:03 by achavez           #+#    #+#             */
-/*   Updated: 2018/11/10 13:16:21 by achavez          ###   ########.fr       */
+/*   Updated: 2019/02/02 21:09:02 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# define BUFF_SIZE 16
+# define ERROR -1
 
 void				*ft_memset(void *ptr, int x, size_t n);
 void				ft_bzero(void *string, size_t count);
@@ -23,6 +25,7 @@ void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void				*ft_memchr(const void *str, int c, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t len);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
+int					get_next_line(const int fd, char **line);
 size_t				ft_strlen(const char *str);
 char				*ft_strdup(const char *str);
 char				*ft_strndup(const char *str, size_t n);
@@ -88,6 +91,5 @@ t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-int				get_next_line(int file_descriptor, char **line);
 
 #endif
