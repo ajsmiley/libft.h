@@ -13,7 +13,7 @@ memset		| ft_memalloc	| ft_lstnew		| ft_upstring
 bzero	  	| ft_memdel		| ft_lstdelone| ft_iterupchar
 memcpy		| ft_strnew		| ft_lstdel		| ft_strndup
 memccpy		| ft_strdel		| ft_lstadd		| ft_strnlen
-memmove		| ft_strclr		| ft_lstiter	|    
+memmove		| ft_strclr		| ft_lstiter	| get_next_line
 memchr		| ft_striter	| ft_lstmap		| 
 memcmp		| ft_striteri	|			      	| 
 strlen		| ft_strmap		|				      | 
