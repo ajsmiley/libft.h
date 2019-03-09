@@ -16,7 +16,7 @@ memccpy		| ft_strdel		| ft_lstadd		| ft_strnlen
 memmove		| ft_strclr		| ft_lstiter	| get_next_line
 memchr		| ft_striter	| ft_lstmap		| ft_putfloat
 memcmp		| ft_striteri	|			| ft_itoa_base
-strlen		| ft_strmap		|		      | 
+strlen		| ft_strmap		|		      | ft_putnbr_u
 strdup		| ft_strmapi	|		      | 
 strcpy		| ft_strequ		|	      	| 
 strncpy		| ft_strnequ	|			| 
