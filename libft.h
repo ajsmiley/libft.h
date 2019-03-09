@@ -6,7 +6,7 @@
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:43:03 by achavez           #+#    #+#             */
-/*   Updated: 2019/02/02 21:09:02 by achavez          ###   ########.fr       */
+/*   Updated: 2019/03/08 16:06:54 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int					ft_strncmp(const char *str1, const char *str2, size_t n);
 char				*ft_strnstr(const char *s, const char *n, size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_atoi(const char *str);
+void				ft_putnbr_u(unsigned int num);
+void				ft_putfloat(double f);
 int					ft_isalpha(int arg);
 int					ft_isdigit(int arg);
 int					ft_isalnum(int arg);
@@ -49,6 +51,7 @@ int					ft_isascii(int arg);
 int					ft_isprint(int arg);
 int					ft_upperchar(char *character);
 char				ft_iterupchar(unsigned int index, char *character);
+char				*ft_itoa_base(int value, int base);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 void				*ft_memalloc(size_t size);
