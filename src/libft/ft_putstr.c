@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2018/10/26 16:09:36 by achavez           #+#    #+#             */
+/*   Updated: 2019/04/25 18:21:33 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
 
-int main()
+void	ft_putstr(char const *s)
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	int i;
+
+	if (s != NULL)
+	{
+		i = 0;
+		while (s[i])
+		{
+			ft_putchar(s[i]);
+			i++;
+		}
+	}
 }

@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2018/10/30 16:17:04 by achavez           #+#    #+#             */
+/*   Updated: 2018/10/31 17:42:38 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
 
-int main()
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	if (alst)
+	{
+		del((*alst)->content, (*alst)->content_size);
+		free(*alst);
+		*alst = NULL;
+	}
 }

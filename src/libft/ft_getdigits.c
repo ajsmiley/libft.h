@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_getdigits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2019/03/22 14:45:20 by achavez           #+#    #+#             */
+/*   Updated: 2020/02/23 16:57:15 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
 
-int main()
+int		ft_getdigits(intmax_t num)
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	int digits;
+
+	digits = 1;
+	if (num < 0)
+		num *= -1;
+	while (num > 9)
+	{
+		num /= 10;
+		digits++;
+	}
+	return (digits);
 }

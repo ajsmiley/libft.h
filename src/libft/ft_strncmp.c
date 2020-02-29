@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2018/10/24 15:32:28 by achavez           #+#    #+#             */
+/*   Updated: 2018/11/09 15:26:43 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
 
-int main()
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	while (n > 0 && *str1 != '\0' && *str1 == *str2)
+	{
+		str1++;
+		str2++;
+		n--;
+	}
+	if (n == 0)
+		return (0);
+	else
+		return (*(unsigned char*)str1 - *(unsigned char*)str2);
 }

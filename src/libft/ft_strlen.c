@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2018/10/23 15:23:32 by achavez           #+#    #+#             */
+/*   Updated: 2018/10/30 15:47:04 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
 
-int main()
+size_t	ft_strlen(const char *str)
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	size_t i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

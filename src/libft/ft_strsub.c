@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2018/10/25 16:30:44 by achavez           #+#    #+#             */
+/*   Updated: 2018/11/09 17:34:49 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
 
-int main()
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	char	*str;
+	size_t	i;
+
+	i = 0;
+	if (!s)
+		return (NULL);
+	str = ft_strnew(len);
+	if (!str)
+		return (NULL);
+	while (i < len)
+		*(str + i++) = *(s + start++);
+	return (str);
 }

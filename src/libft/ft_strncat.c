@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2018/10/23 20:39:55 by achavez           #+#    #+#             */
+/*   Updated: 2018/11/01 16:11:04 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
 
-int main()
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	int i;
+	int j;
+
+	i = -1;
+	j = (int)ft_strlen(dest);
+	while (*(src + ++i) && i < (int)n)
+		*(dest + j++) = *(src + i);
+	*(dest + j) = '\0';
+	return (dest);
 }

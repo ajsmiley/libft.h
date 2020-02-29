@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2018/10/23 20:16:30 by achavez           #+#    #+#             */
+/*   Updated: 2018/11/09 20:30:24 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
 
-int main()
+char	*ft_strncpy(char *dest, const char *src, size_t len)
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	size_t i;
+
+	i = -1;
+	while (++i < len)
+		if (*(src + i))
+			*(dest + i) = *(src + i);
+		else
+			while (i < len)
+				*(dest + i++) = '\0';
+	return (dest);
 }

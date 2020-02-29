@@ -1,19 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_iota.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2018/10/26 18:13:57 by achavez           #+#    #+#             */
+/*   Updated: 2018/10/31 17:11:22 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
 
-int main()
+size_t	get_numlen(int n)
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	size_t	i;
+
+	i = 1;
+	while (n /= 10)
+		++i;
+	return (i);
+}
+
+char	*ft_iota(int n)
+{
+	char	*str;
+	size_t	len;
+
+	len = get_numlen(n);
+	if (n < 0)
+		len++;
+	if (!(str = ft_strnew(len)))
+		return (NULL);
+	str[--len] = (n % 10) + '0';
+	while (n /= 10)
+		str[--len] = (n % 10) + '0';
+	if (n < 0)
+		*(str + 0) = '-';
+	return (str);
 }

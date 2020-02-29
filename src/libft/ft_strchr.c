@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2018/10/24 13:26:56 by achavez           #+#    #+#             */
+/*   Updated: 2018/11/09 18:25:50 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
 
-int main()
+char	*ft_strchr(const char *str, int c)
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	char ch;
+
+	ch = c;
+	while (*str != ch)
+	{
+		if (*str == '\0')
+			return (NULL);
+		str++;
+	}
+	return ((char *)str);
 }

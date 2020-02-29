@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_itoa_u.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2019/04/24 18:18:22 by achavez           #+#    #+#             */
+/*   Updated: 2020/02/23 14:52:41 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
 
-int main()
+char	*ft_itoa_u(uintmax_t n)
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	char *s;
+
+	if ((s = (char *)malloc(sizeof(char) * 2)))
+	{
+		if (n >= 10)
+			s = ft_strjoin(ft_itoa_u(n / 10), ft_itoa_u(n % 10));
+		else if (n < 10)
+		{
+			s[0] = n + '0';
+			s[1] = '\0';
+		}
+		return (s);
+	}
+	return (NULL);
 }

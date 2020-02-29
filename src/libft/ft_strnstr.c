@@ -1,19 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2018/10/24 16:10:06 by achavez           #+#    #+#             */
+/*   Updated: 2018/11/09 14:53:34 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
 
-int main()
+char	*ft_strnstr(const char *hay, const char *ned, size_t len)
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	size_t i;
+	size_t j;
+
+	if (*ned == '\0')
+		return ((char *)hay);
+	i = 0;
+	while (hay[i] && i < len)
+	{
+		j = 0;
+		while (hay[i + j] && i + j < len && ned[j] && hay[i + j] == ned[j])
+			j++;
+		if (ned[j] == '\0')
+			return ((char *)(hay + i));
+		i++;
+	}
+	return (NULL);
 }

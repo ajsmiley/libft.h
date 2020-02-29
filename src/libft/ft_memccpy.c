@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   memccpy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2018/10/23 12:55:09 by achavez           #+#    #+#             */
+/*   Updated: 2018/11/09 20:28:29 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
 
-int main()
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	char			*sr;
+	char			*ds;
+	size_t			i;
+
+	sr = (char *)src;
+	ds = (char *)dst;
+	i = -1;
+	while (++i < n)
+	{
+		ds[i] = sr[i];
+		if ((unsigned char)sr[i] == (unsigned char)c)
+			return ((char *)(dst + ++i));
+	}
+	return (NULL);
 }

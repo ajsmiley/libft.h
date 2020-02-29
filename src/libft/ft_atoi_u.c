@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atoi_u.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2020/02/23 17:02:24 by achavez           #+#    #+#             */
+/*   Updated: 2020/02/23 17:02:44 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
+#include <stdio.h>
 
-int main()
+uintmax_t	ft_atoi_u(const char *str)
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	size_t val;
+
+	val = 0;
+	while ((*str >= 9 && *str <= 13) || *str == ' ')
+		str++;
+	while (*str >= '0' && *str <= '9')
+	{
+		val *= 10;
+		val += *str - '0';
+		str++;
+		printf("Val = %jo\n", val);
+	}
+	return (val);
 }

@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 15:02:06 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 20:03:57 by achavez          ###   ########.fr       */
+/*   Created: 2018/10/23 13:15:11 by achavez           #+#    #+#             */
+/*   Updated: 2018/11/09 20:22:18 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "libft.h"
 
-int main()
+void	*ft_memchr(const void *src, int c, size_t len)
 {
-	ft_printf("HELLO WOLRD!!!\n");
-	return (0);
+	unsigned char	*i;
+	unsigned char	l;
+
+	i = (unsigned char *)src;
+	l = (unsigned char)c;
+	while (len--)
+	{
+		if (*i == l)
+			return (i);
+		i++;
+	}
+	return (NULL);
 }
