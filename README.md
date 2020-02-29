@@ -49,7 +49,7 @@ Head over to the main.c file like this and check it out:
 Right now main is calling ft_function_test1() and that will print out information about the libc functions and how to use them. If you wish to test other functions you should do so in this file only.
 Now just run this command to compile the main file with the library:
       
-      make main
+      make test
 And finally run the this command to execute the main.c file:
 
       ./a.out
