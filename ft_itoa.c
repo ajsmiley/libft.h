@@ -12,14 +12,12 @@
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+char	*ft_itoa(intmax_t n)
 {
 	char *s;
 
 	if ((s = (char *)malloc(sizeof(char) * 2)))
 	{
-		if (n == -2147483648)
-			return (ft_strcpy(s, "-2147483648"));
 		if (n < 0)
 		{
 			s[0] = '-';

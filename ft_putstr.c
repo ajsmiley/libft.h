@@ -6,7 +6,7 @@
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 16:09:36 by achavez           #+#    #+#             */
-/*   Updated: 2018/11/09 15:39:30 by achavez          ###   ########.fr       */
+/*   Updated: 2019/04/25 18:21:33 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@ void	ft_putstr(char const *s)
 {
 	int i;
 
-	i = 0;
-	while (s[i])
+	if (s != NULL)
 	{
-		ft_putchar(s[i]);
-		i++;
+		i = 0;
+		while (s[i])
+		{
+			ft_putchar(s[i]);
+			i++;
+		}
 	}
 }

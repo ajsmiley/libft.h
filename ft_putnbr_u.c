@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_putnbr_u(unsigned int n)
+void	ft_putnbr_u(uintmax_t n)
 {
 	if (n >= 10)
 	{

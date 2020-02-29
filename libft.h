@@ -6,7 +6,7 @@
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:43:03 by achavez           #+#    #+#             */
-/*   Updated: 2019/03/08 16:06:54 by achavez          ###   ########.fr       */
+/*   Updated: 2020/02/23 16:56:10 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					get_next_line(const int fd, char **line);
 size_t				ft_strlen(const char *str);
 char				*ft_strdup(const char *str);
+char				ft_strchr_c(const char *str, int c);
+void				ft_strlower(char *str);
 char				*ft_strndup(const char *str, size_t n);
 char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strncpy(char *dest, const char *src, size_t len);
@@ -36,17 +38,21 @@ size_t				ft_strnlen(const char *str, size_t maxlen);
 char				*ft_strncat(char *dest, const char *src, size_t n);
 size_t				ft_strlcat(char *dest, const char *src, size_t n);
 char				*ft_strchr(const char *str, int c);
+char				*ft_itoa_u(uintmax_t x);
 char				*ft_strrchr(const char *str, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
 int					ft_strncmp(const char *str1, const char *str2, size_t n);
 char				*ft_strnstr(const char *s, const char *n, size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_atoi(const char *str);
-void				ft_putnbr_u(unsigned int num);
-void				ft_putfloat(double f);
+uintmax_t			ft_atoi_u(const char *str);
+void				ft_putnbr_u(uintmax_t num);
+char				*ft_putfloat(long double f, int precision);
+char				*ft_itoa_base_u(uintmax_t x, int base);
 int					ft_isalpha(int arg);
 int					ft_isdigit(int arg);
 int					ft_isalnum(int arg);
+int					ft_getdigits(intmax_t num);
 int					ft_isascii(int arg);
 int					ft_isprint(int arg);
 int					ft_upperchar(char *character);
@@ -72,14 +78,17 @@ char				**ft_strsplit(char const *string, char delimiter);
 void				ft_putchar(char c);
 void				ft_putstr(char const *string);
 void				ft_putendl(char const *string);
-void				ft_putnbr(int n);
+void				ft_putnbr(intmax_t n);
 void				ft_putchar_fd(char character, int file_descriptor);
 void				ft_putstr_fd(char const *string, int file_descriptor);
 void				ft_putendl_fd(char const *string, int file_descriptor);
-void				ft_putnbr_fd(int number, int file_descriptor);
-char				*ft_itoa(int number);
+void				ft_putnbr_fd(intmax_t number, int file_descriptor);
+char				*ft_itoa(intmax_t number);
+uintmax_t			ft_u_num_to_base(uintmax_t num, int base);
 void				ft_function_test1();
 void				ft_function_test2();
+double				ft_ln(double x);
+double				ft_log10(double x);
 
 typedef struct		s_list
 {

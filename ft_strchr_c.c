@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strchr_c.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achavez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/26 16:23:15 by achavez           #+#    #+#             */
-/*   Updated: 2018/11/09 18:54:06 by achavez          ###   ########.fr       */
+/*   Created: 2019/03/13 15:56:49 by achavez           #+#    #+#             */
+/*   Updated: 2019/03/13 16:25:44 by achavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(intmax_t n)
+char	ft_strchr_c(const char *str, int c)
 {
-	ft_putnbr_fd(n, 1);
+	char	*s;
+
+	s = (char *)str;
+	while (*s != '\0')
+	{
+		if (*s == c)
+			return (1);
+		s++;
+	}
+	if (*s == '\0' && c == '\0')
+		return (0);
+	return (0);
 }
